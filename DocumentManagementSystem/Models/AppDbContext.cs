@@ -37,9 +37,9 @@ namespace DocumentManagementSystem.Models
             //    .HasIndex(ds => new { ds.DocumentId, ds.ShareWithUserId })
             //    .IsUnique();
 
-            //modelBuilder.Entity<User>()
-            //    .HasIndex(u => u.Email)
-            //    .IsUnique();
+            modelBuilder.Entity<User>()
+                .HasIndex(u => u.Email)
+                .IsUnique();
         }
 
 

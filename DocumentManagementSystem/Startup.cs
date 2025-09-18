@@ -29,9 +29,9 @@ namespace DocumentManagementSystem
         {
             services.AddControllersWithViews();
             services.AddDbContext<AppDbContext>(options =>
-            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            options.UseSqlServer(Configuration.GetConnectionString("UniCon")));
             services.AddScoped<IUserRepository, UserRepository>();
-            services.AddScoped<IDocumentRepository, DocumentRepository>();
+            //services.AddScoped<IDocumentRepository, DocumentRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -58,7 +58,7 @@ namespace DocumentManagementSystem
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=User}/{action=Login}/{id?}");
             });
         }
     }
