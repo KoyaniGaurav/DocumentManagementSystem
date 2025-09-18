@@ -1,0 +1,30 @@
+﻿# Build folders
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userprefs
+*.VC.db
+
+# Rider / JetBrains
+.idea/
+*.sln.iml
+
+# ASP.NET temp files
+*.log
+appsettings.*.json
+
+# NuGet
+*.nupkg
+.packages/
+
+# node and tooling (if present)
+node_modules/
+wwwroot/lib/
+
+# OS files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,219 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\kgaur\\source\\repos\\dotnet\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{95B71B77-B54B-4703-9A85-C6B3C4EEB09E}|DocumentManagementSystem\\DocumentManagementSystem.csproj|c:\\users\\kgaur\\source\\repos\\dotnet\\documentmanagementsystem\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{95B71B77-B54B-4703-9A85-C6B3C4EEB09E}|DocumentManagementSystem\\DocumentManagementSystem.csproj|solutionrelative:documentmanagementsystem\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95B71B77-B54B-4703-9A85-C6B3C4EEB09E}|DocumentManagementSystem\\DocumentManagementSystem.csproj|c:\\users\\kgaur\\source\\repos\\dotnet\\documentmanagementsystem\\repository\\implementations\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95B71B77-B54B-4703-9A85-C6B3C4EEB09E}|DocumentManagementSystem\\DocumentManagementSystem.csproj|solutionrelative:documentmanagementsystem\\repository\\implementations\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95B71B77-B54B-4703-9A85-C6B3C4EEB09E}|DocumentManagementSystem\\DocumentManagementSystem.csproj|c:\\users\\kgaur\\source\\repos\\dotnet\\documentmanagementsystem\\models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95B71B77-B54B-4703-9A85-C6B3C4EEB09E}|DocumentManagementSystem\\DocumentManagementSystem.csproj|solutionrelative:documentmanagementsystem\\models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95B71B77-B54B-4703-9A85-C6B3C4EEB09E}|DocumentManagementSystem\\DocumentManagementSystem.csproj|c:\\users\\kgaur\\source\\repos\\dotnet\\documentmanagementsystem\\repository\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95B71B77-B54B-4703-9A85-C6B3C4EEB09E}|DocumentManagementSystem\\DocumentManagementSystem.csproj|solutionrelative:documentmanagementsystem\\repository\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95B71B77-B54B-4703-9A85-C6B3C4EEB09E}|DocumentManagementSystem\\DocumentManagementSystem.csproj|c:\\users\\kgaur\\source\\repos\\dotnet\\documentmanagementsystem\\repository\\interfaces\\idocumentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95B71B77-B54B-4703-9A85-C6B3C4EEB09E}|DocumentManagementSystem\\DocumentManagementSystem.csproj|solutionrelative:documentmanagementsystem\\repository\\interfaces\\idocumentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95B71B77-B54B-4703-9A85-C6B3C4EEB09E}|DocumentManagementSystem\\DocumentManagementSystem.csproj|c:\\users\\kgaur\\source\\repos\\dotnet\\documentmanagementsystem\\repository\\interfaces\\idocumentsharerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95B71B77-B54B-4703-9A85-C6B3C4EEB09E}|DocumentManagementSystem\\DocumentManagementSystem.csproj|solutionrelative:documentmanagementsystem\\repository\\interfaces\\idocumentsharerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95B71B77-B54B-4703-9A85-C6B3C4EEB09E}|DocumentManagementSystem\\DocumentManagementSystem.csproj|c:\\users\\kgaur\\source\\repos\\dotnet\\documentmanagementsystem\\repository\\interfaces\\icatogoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95B71B77-B54B-4703-9A85-C6B3C4EEB09E}|DocumentManagementSystem\\DocumentManagementSystem.csproj|solutionrelative:documentmanagementsystem\\repository\\interfaces\\icatogoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95B71B77-B54B-4703-9A85-C6B3C4EEB09E}|DocumentManagementSystem\\DocumentManagementSystem.csproj|c:\\users\\kgaur\\source\\repos\\dotnet\\documentmanagementsystem\\models\\documentshare.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95B71B77-B54B-4703-9A85-C6B3C4EEB09E}|DocumentManagementSystem\\DocumentManagementSystem.csproj|solutionrelative:documentmanagementsystem\\models\\documentshare.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95B71B77-B54B-4703-9A85-C6B3C4EEB09E}|DocumentManagementSystem\\DocumentManagementSystem.csproj|c:\\users\\kgaur\\source\\repos\\dotnet\\documentmanagementsystem\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95B71B77-B54B-4703-9A85-C6B3C4EEB09E}|DocumentManagementSystem\\DocumentManagementSystem.csproj|solutionrelative:documentmanagementsystem\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95B71B77-B54B-4703-9A85-C6B3C4EEB09E}|DocumentManagementSystem\\DocumentManagementSystem.csproj|c:\\users\\kgaur\\source\\repos\\dotnet\\documentmanagementsystem\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95B71B77-B54B-4703-9A85-C6B3C4EEB09E}|DocumentManagementSystem\\DocumentManagementSystem.csproj|solutionrelative:documentmanagementsystem\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95B71B77-B54B-4703-9A85-C6B3C4EEB09E}|DocumentManagementSystem\\DocumentManagementSystem.csproj|c:\\users\\kgaur\\source\\repos\\dotnet\\documentmanagementsystem\\models\\document.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95B71B77-B54B-4703-9A85-C6B3C4EEB09E}|DocumentManagementSystem\\DocumentManagementSystem.csproj|solutionrelative:documentmanagementsystem\\models\\document.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\kgaur\\source\\repos\\dotnet\\DocumentManagementSystem\\.gitignore",
+              "RelativeDocumentMoniker": "DocumentManagementSystem\\.gitignore",
+              "ToolTip": "C:\\Users\\kgaur\\source\\repos\\dotnet\\DocumentManagementSystem\\.gitignore",
+              "RelativeToolTip": "DocumentManagementSystem\\.gitignore",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-09-18T13:37:52.14Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\kgaur\\source\\repos\\dotnet\\DocumentManagementSystem\\Repository\\Implementations\\UserRepository.cs",
+              "RelativeDocumentMoniker": "DocumentManagementSystem\\Repository\\Implementations\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\kgaur\\source\\repos\\dotnet\\DocumentManagementSystem\\Repository\\Implementations\\UserRepository.cs",
+              "RelativeToolTip": "DocumentManagementSystem\\Repository\\Implementations\\UserRepository.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAmwCcAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T13:30:42.336Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ICatogoryRepository.cs",
+              "DocumentMoniker": "C:\\Users\\kgaur\\source\\repos\\dotnet\\DocumentManagementSystem\\Repository\\Interfaces\\ICatogoryRepository.cs",
+              "RelativeDocumentMoniker": "DocumentManagementSystem\\Repository\\Interfaces\\ICatogoryRepository.cs",
+              "ToolTip": "C:\\Users\\kgaur\\source\\repos\\dotnet\\DocumentManagementSystem\\Repository\\Interfaces\\ICatogoryRepository.cs",
+              "RelativeToolTip": "DocumentManagementSystem\\Repository\\Interfaces\\ICatogoryRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T13:24:36.669Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IDocumentShareRepository.cs",
+              "DocumentMoniker": "C:\\Users\\kgaur\\source\\repos\\dotnet\\DocumentManagementSystem\\Repository\\Interfaces\\IDocumentShareRepository.cs",
+              "RelativeDocumentMoniker": "DocumentManagementSystem\\Repository\\Interfaces\\IDocumentShareRepository.cs",
+              "ToolTip": "C:\\Users\\kgaur\\source\\repos\\dotnet\\DocumentManagementSystem\\Repository\\Interfaces\\IDocumentShareRepository.cs",
+              "RelativeToolTip": "DocumentManagementSystem\\Repository\\Interfaces\\IDocumentShareRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T13:23:37.32Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IDocumentRepository.cs",
+              "DocumentMoniker": "C:\\Users\\kgaur\\source\\repos\\dotnet\\DocumentManagementSystem\\Repository\\Interfaces\\IDocumentRepository.cs",
+              "RelativeDocumentMoniker": "DocumentManagementSystem\\Repository\\Interfaces\\IDocumentRepository.cs",
+              "ToolTip": "C:\\Users\\kgaur\\source\\repos\\dotnet\\DocumentManagementSystem\\Repository\\Interfaces\\IDocumentRepository.cs",
+              "RelativeToolTip": "DocumentManagementSystem\\Repository\\Interfaces\\IDocumentRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T13:21:26.01Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\kgaur\\source\\repos\\dotnet\\DocumentManagementSystem\\Repository\\Interfaces\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "DocumentManagementSystem\\Repository\\Interfaces\\IUserRepository.cs",
+              "ToolTip": "C:\\Users\\kgaur\\source\\repos\\dotnet\\DocumentManagementSystem\\Repository\\Interfaces\\IUserRepository.cs",
+              "RelativeToolTip": "DocumentManagementSystem\\Repository\\Interfaces\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T13:20:19.21Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\kgaur\\source\\repos\\dotnet\\DocumentManagementSystem\\Models\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "DocumentManagementSystem\\Models\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\kgaur\\source\\repos\\dotnet\\DocumentManagementSystem\\Models\\AppDbContext.cs",
+              "RelativeToolTip": "DocumentManagementSystem\\Models\\AppDbContext.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAowCkAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T12:52:57.328Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DocumentShare.cs",
+              "DocumentMoniker": "C:\\Users\\kgaur\\source\\repos\\dotnet\\DocumentManagementSystem\\Models\\DocumentShare.cs",
+              "RelativeDocumentMoniker": "DocumentManagementSystem\\Models\\DocumentShare.cs",
+              "ToolTip": "C:\\Users\\kgaur\\source\\repos\\dotnet\\DocumentManagementSystem\\Models\\DocumentShare.cs",
+              "RelativeToolTip": "DocumentManagementSystem\\Models\\DocumentShare.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T12:46:05.548Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Document.cs",
+              "DocumentMoniker": "C:\\Users\\kgaur\\source\\repos\\dotnet\\DocumentManagementSystem\\Models\\Document.cs",
+              "RelativeDocumentMoniker": "DocumentManagementSystem\\Models\\Document.cs",
+              "ToolTip": "C:\\Users\\kgaur\\source\\repos\\dotnet\\DocumentManagementSystem\\Models\\Document.cs",
+              "RelativeToolTip": "DocumentManagementSystem\\Models\\Document.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAowCQAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T12:45:52.841Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\kgaur\\source\\repos\\dotnet\\DocumentManagementSystem\\Models\\User.cs",
+              "RelativeDocumentMoniker": "DocumentManagementSystem\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\kgaur\\source\\repos\\dotnet\\DocumentManagementSystem\\Models\\User.cs",
+              "RelativeToolTip": "DocumentManagementSystem\\Models\\User.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwBgAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T12:45:39.598Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{dd1ddd20-d59b-11da-a94d-0800200c9a66}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\kgaur\\source\\repos\\dotnet\\DocumentManagementSystem\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "DocumentManagementSystem\\Models\\Category.cs",
+              "ToolTip": "C:\\Users\\kgaur\\source\\repos\\dotnet\\DocumentManagementSystem\\Models\\Category.cs",
+              "RelativeToolTip": "DocumentManagementSystem\\Models\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T12:45:36.41Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
