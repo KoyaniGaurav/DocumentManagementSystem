@@ -1,5 +1,6 @@
 ﻿using DocumentManagementSystem.Models;
 using DocumentManagementSystem.Repository.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -51,6 +52,13 @@ namespace DocumentManagementSystem.Repository.Implementations
         User IUserRepository.GetByEmail(string email)
         {
             return _context.Users.FirstOrDefault(u => u.Email == email);
+        }
+        User IUserRepository.GetWithDocuments(int id)
+        {
+            return _context.Users
+                .Include(u => u.Documents)
+                    .ThenInclude(d => d.Category)
+                .FirstOrDefault(u => u.Id == id);
         }
     }
 }

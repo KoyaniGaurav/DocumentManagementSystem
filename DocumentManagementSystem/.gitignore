@@ -24,7 +24,10 @@ appsettings.*.json
 # node and tooling (if present)
 node_modules/
 wwwroot/lib/
+wwwroot/uploads
 
 # OS files
 .DS_Store
 Thumbs.db
+
+

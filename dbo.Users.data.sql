@@ -1,3 +1,0 @@
-﻿SET IDENTITY_INSERT [dbo].[Users] ON
-
-SET IDENTITY_INSERT [dbo].[Users] OFF

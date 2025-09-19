@@ -3,6 +3,7 @@ using DocumentManagementSystem.Repository.Implementations;
 using DocumentManagementSystem.Repository.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -31,7 +32,20 @@ namespace DocumentManagementSystem
             services.AddDbContext<AppDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("UniCon")));
             services.AddScoped<IUserRepository, UserRepository>();
-            //services.AddScoped<IDocumentRepository, DocumentRepository>();
+            services.AddScoped<IDocumentRepository, DocumentRepository>();
+            services.AddAntiforgery(options =>
+            {
+                options.Cookie.SecurePolicy = CookieSecurePolicy.Always; // Forces Secure cookies
+                options.Cookie.SameSite = SameSiteMode.Strict;            // Prevents cross-site requests
+            });
+            services.AddDistributedMemoryCache();
+            services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(30);
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,8 +65,10 @@ namespace DocumentManagementSystem
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseSession();
             app.UseAuthorization();
+
+            app.UseHttpsRedirection();
 
             app.UseEndpoints(endpoints =>
             {

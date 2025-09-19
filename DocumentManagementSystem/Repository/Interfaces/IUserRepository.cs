@@ -11,5 +11,6 @@ namespace DocumentManagementSystem.Repository.Interfaces
         void Update(User user);
         void Delete(int id);
         User GetByEmail(string email);
+        User GetWithDocuments(int id);
     }
 }

@@ -37,8 +37,6 @@ namespace DocumentManagementSystem.Models
         public bool IsShared { get; set; } = false;
 
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
-        public DateTime? UpdatedAt { get; set; }
-
         public ICollection<DocumentShare> Shares { get; set; } = new List<DocumentShare>();
     }
 }

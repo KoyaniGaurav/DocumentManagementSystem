@@ -1,0 +1,18 @@
+﻿@model DocumentManagementSystem.Models.Document
+@{
+    ViewData["Title"] = "Document Details";
+}
+
+<h2>Document Details</h2>
+
+<div class="card p-3 mb-3">
+    <h4>@Model.Title</h4>
+    <p><strong>Description:</strong> @Model.Description</p>
+    <p><strong>File Name:</strong> @Model.FileName</p>
+    <p><strong>File Type:</strong> @Model.FileType</p>
+    <p><strong>Created At:</strong> @Model.CreatedAt.ToString("dd MMM yyyy")</p>
+
+    <a class="btn btn-primary" href="@Model.FilePath" target="_blank">View</a>
+    <br/>
+    <a asp-controller= "User" asp-action="UserIndex" class="btn btn-secondary">Back</a>
+</div>
