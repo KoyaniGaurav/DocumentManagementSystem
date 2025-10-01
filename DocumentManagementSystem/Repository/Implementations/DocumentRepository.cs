@@ -1,5 +1,6 @@
 ﻿using DocumentManagementSystem.Models;
 using DocumentManagementSystem.Repository.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -12,11 +13,6 @@ namespace DocumentManagementSystem.Repository.Implementations
         public DocumentRepository(AppDbContext context)
         {
             _context = context;
-        }
-
-        public List<Document> GetAll()
-        {
-            return _context.Documents.ToList();
         }
 
         public Document GetById(int id)
@@ -47,12 +43,21 @@ namespace DocumentManagementSystem.Repository.Implementations
             }
         }
 
-        // Get documents uploaded by a specific user - pending.......
-        public List<Document> GetByUserId(int userId)
+        public Document GetDocumentWithOwner(int id)
         {
             return _context.Documents
-                           .Where(d => d.Id == userId)
-                           .ToList();
+                .Include(d => d.Owner)
+                .Include(d => d.Category)
+                .FirstOrDefault(d => d.Id == id);
+        }
+
+        public List<Document> GetDocumentsByOwnerId(int ownerId)
+        {
+            return _context.Documents
+                .Include(d => d.Owner)
+                .Include(d => d.Category)
+                .Where(d => d.OwnerId == ownerId)
+                .ToList();
         }
     }
 }

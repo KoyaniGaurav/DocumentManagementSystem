@@ -1,0 +1,30 @@
+﻿@model List<DocumentManagementSystem.Models.Notification>
+
+@{
+    ViewData["Title"] = "ShowNotification";
+}
+
+<h1>Show Notification</h1>
+
+@foreach (var notification in Model)
+{
+    <div class="card mb-3 p-3 shadow-sm">
+        <h4>@notification.Title</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">Title</dt>
+            <dd class="col-sm-10">@notification.Title</dd>
+
+            <dt class="col-sm-2">Description</dt>
+            <dd class="col-sm-10">@notification.Description</dd>
+
+            <dt class="col-sm-2">User</dt>
+            <dd class="col-sm-10">@notification.User?.Email</dd>
+        </dl>
+
+        <div>
+            <a asp-controller="Document" asp-action="ViewShared" asp-route-id="@notification.documentId" style="display:inline-block; padding:6px 12px; background:#007bff; color:#fff; text-decoration:none; border-radius:4px; margin-right:10px;">View</a>
+            <a asp-controller="User" asp-action="UserIndex" style="display:inline-block; padding:6px 12px; background:#6c757d; color:#fff; text-decoration:none; border-radius:4px;">Back to Dashboard</a>
+        </div>
+    </div>
+}

@@ -33,6 +33,8 @@ namespace DocumentManagementSystem
             options.UseSqlServer(Configuration.GetConnectionString("UniCon")));
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IDocumentRepository, DocumentRepository>();
+            services.AddScoped<IDocumentShareRepository, DocumentShareRepository>();
+            services.AddScoped<INotificationRepository,NotificationRepository>();
             services.AddAntiforgery(options =>
             {
                 options.Cookie.SecurePolicy = CookieSecurePolicy.Always; // Forces Secure cookies

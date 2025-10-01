@@ -30,11 +30,17 @@ namespace DocumentManagementSystem.Models
         [Required]
         public UserRole Role { get; set; } = UserRole.User;
 
+        // User - Document (one - many)
         public ICollection<Document> Documents { get; set; } = new List<Document>();
 
+        // Admin - Document (one - meny)
         public ICollection<DocumentShare> DocumentsSharedBy { get; set; } = new List<DocumentShare>();
 
+        // User - Document (one - many)
         public ICollection<DocumentShare> DocumentsSharedWith { get; set; } = new List<DocumentShare>();
+
+        // User - Notification (one - many)
+        public ICollection<Notification> Notifications { get; set; } = new List<Notification>();
 
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     }

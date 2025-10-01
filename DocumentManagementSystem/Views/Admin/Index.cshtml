@@ -1,38 +1,44 @@
-﻿@model IEnumerable<DocumentManagementSystem.Models.Document>
+@model IEnumerable<DocumentManagementSystem.Models.AdminIndexViewmodel>
 
 @{
+    ViewData["Title"] = "Admin Dashboard";
     var sharedDocuments = ViewBag.SharedDocuments as IEnumerable<DocumentManagementSystem.Models.SharedDocumentViewModel>;
 }
 
-<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
-    <h3 style="margin: 0;">Welcome, @ViewBag.Name!</h3>
-    <div style="display: flex; align-items: center; gap: 10px;">
-        <a asp-action="UpdateProfile" class="btn btn-info" style="font-size: 12px; padding: 5px 10px;">Update Profile</a>
+<div class="header">
+    <h3>Welcome, @ViewBag.Name!</h3>
+    <div>
+        <a  asp-controller="User" asp-action="UpdateProfile" class="btn btn-info">Update Profile</a>
     </div>
 </div>
 <hr />
 
-<p>
-    <a asp-controller="Document" asp-action="Create" class="btn">Add New Document</a>
-    <a asp-controller="User" asp-action="ShowNotification" class="btn">Show Notifications</a>
-</p>
+<div class="actions">
+    <a asp-controller="Document" asp-action="Create" class="btn btn-primary">Add New Document</a>
+    <a asp-action="ManageSharedDocuments" class="btn btn-info">Manage Shared Documents</a>
+</div>
 
-<div style="margin-bottom: 20px;">
-    <form method="get" asp-action="UserIndex">
-        <div style="display: flex; gap: 10px; align-items: center;">
-            <input type="text" name="searchTerm" value="@ViewBag.SearchTerm" placeholder="Search documents by title..." 
-                   style="padding: 8px; border: 1px solid #ccc; border-radius: 4px; flex: 1; max-width: 300px;" />
-            <button type="submit" class="btn" style="margin: 0;">Search</button>
-            @if (!string.IsNullOrEmpty(ViewBag.SearchTerm))
-            {
-                <a asp-action="UserIndex" class="btn" style="background-color: #6c757d;">Clear</a>
-            }
-        </div>
+<!-- Search Form -->
+<div class="search-box">
+    <form method="get" asp-action="Index">
+        <input type="text" name="searchTerm" value="@ViewBag.SearchTerm" placeholder="Search documents by title..." />
+        <button type="submit" class="btn btn-primary">Search</button>
+        @if (!string.IsNullOrEmpty(ViewBag.SearchTerm))
+        {
+            <a asp-action="Index" class="btn btn-secondary">Clear</a>
+        }
     </form>
 </div>
 
-<!-- My Documents Section -->
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="success-message">
+        @TempData["SuccessMessage"]
+    </div>
+}
+
 <h3>My Documents</h3>
+
 @if (Model != null && Model.Any())
 {
     <table class="simple-table">
@@ -55,12 +61,13 @@
                     <td>@doc.Description</td>
                     <td>@doc.FileName</td>
                     <td>@doc.FileType</td>
-                    <td>@doc.Category?.Name</td>
+                    <td>@doc.CategoryName</td>
                     <td>@doc.CreatedAt.ToString("yyyy-MM-dd")</td>
                     <td>
-                        <a asp-controller="Document" asp-action="Details" asp-route-id="@doc.Id" class="btn-small">View</a>
-                        <a asp-controller="Document" asp-action="Edit" asp-route-id="@doc.Id" class="btn-small">Edit</a>
-                        <a asp-controller="Document" asp-action="Delete" asp-route-id="@doc.Id" class="btn-small danger">Delete</a>
+                        <a asp-controller="Document" asp-action="Details" asp-route-id="@doc.Id" class="btn btn-sm btn-info">View</a>
+                        <a asp-controller="Document" asp-action="Edit" asp-route-id="@doc.Id" class="btn btn-sm btn-warning">Edit</a>
+                        <a asp-action="ShareDocument" asp-route-id="@doc.Id" class="btn btn-sm btn-success">Share</a>
+                        <a asp-controller="Document" asp-action="Delete" asp-route-id="@doc.Id" class="btn btn-sm btn-danger">Delete</a>
                     </td>
                 </tr>
             }
@@ -69,9 +76,13 @@
 }
 else
 {
-    <p>No documents found. <a asp-controller="Document" asp-action="Create" class="btn">Create one</a></p>
+    <div class="no-data">
+        <p>No documents found. Start by creating your first document.</p>
+        <a asp-action="CreateDocument" class="btn btn-primary">Create Document</a>
+    </div>
 }
 
+<h3>Shared with Me</h3>
 <!-- Shared Documents Section -->
 @if (sharedDocuments != null && sharedDocuments.Any())
 {
@@ -107,24 +118,50 @@ else
         </tbody>
     </table>
 }
+else
+{
+    <div class="no-data">
+        <h4>No documents shared yet to you.</h4>
+    </div>
+}
 
+@section Scripts {
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+}
 
 <style>
     body {
         font-family: Arial, sans-serif;
         margin: 20px;
+        color: #333;
     }
 
     h2, h3 {
         margin-bottom: 10px;
-        color: #222;
     }
 
-    p {
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .actions {
         margin-bottom: 15px;
     }
 
-    .btn, .btn-small {
+    .search-box {
+        margin-bottom: 20px;
+    }
+
+        .search-box input {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 250px;
+        }
+
+    .btn {
         display: inline-block;
         padding: 6px 12px;
         background-color: #4285f4;
@@ -135,16 +172,41 @@ else
         margin-right: 5px;
     }
 
-    .btn-small {
+    .btn-info {
+        background-color: #17a2b8;
+    }
+
+    .btn-warning {
+        background-color: #f0ad4e;
+    }
+
+    .btn-success {
+        background-color: #28a745;
+    }
+
+    .btn-danger {
+        background-color: #d9534f;
+    }
+
+    .btn-secondary {
+        background-color: #6c757d;
+    }
+
+    .btn-sm {
         font-size: 13px;
         padding: 4px 8px;
     }
 
-    .danger {
-        background-color: #d9534f;
+    .btn-small {
+        font-size: 12px;
+        padding: 3px 7px;
     }
 
-    /* Simple table */
+    .success-message {
+        color: green;
+        margin-bottom: 10px;
+    }
+
     .simple-table {
         width: 100%;
         border-collapse: collapse;
@@ -153,7 +215,7 @@ else
 
         .simple-table th, .simple-table td {
             border: 1px solid #ccc;
-            padding: 6px;
+            padding: 8px;
             text-align: left;
         }
 
@@ -164,4 +226,9 @@ else
         .simple-table tr:nth-child(even) {
             background-color: #fafafa;
         }
+
+    .no-data {
+        margin-top: 20px;
+        text-align: center;
+    }
 </style>

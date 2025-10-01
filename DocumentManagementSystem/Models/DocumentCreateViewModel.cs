@@ -11,6 +11,8 @@ namespace DocumentManagementSystem.Models
 
         public string Description { get; set; }
 
+        public int? CategoryId { get; set; }
+
         [Required(ErrorMessage = "Please select a file")]
         public IFormFile File { get; set; }   
     }

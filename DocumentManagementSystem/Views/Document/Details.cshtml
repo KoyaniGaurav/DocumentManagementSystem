@@ -1,18 +1,41 @@
-﻿@model DocumentManagementSystem.Models.Document
+﻿@using Microsoft.AspNetCore.Http
+@model DocumentManagementSystem.Models.Document
 @{
     ViewData["Title"] = "Document Details";
 }
 
 <h2>Document Details</h2>
 
-<div class="card p-3 mb-3">
-    <h4>@Model.Title</h4>
+<div style="border:1px solid #ddd; border-radius:5px; padding:15px; margin-bottom:15px;">
+    <h4 style="margin-bottom:10px;">@Model.Title</h4>
     <p><strong>Description:</strong> @Model.Description</p>
     <p><strong>File Name:</strong> @Model.FileName</p>
     <p><strong>File Type:</strong> @Model.FileType</p>
     <p><strong>Created At:</strong> @Model.CreatedAt.ToString("dd MMM yyyy")</p>
 
-    <a class="btn btn-primary" href="@Model.FilePath" target="_blank">View</a>
-    <br/>
-    <a asp-controller= "User" asp-action="UserIndex" class="btn btn-secondary">Back</a>
+    <div style="margin-top:15px;">
+        <a href="@Model.FilePath" target="_blank"
+           style="display:inline-block; padding:6px 12px; background:#007bff; color:#fff; text-decoration:none; border-radius:4px; margin-right:10px;">
+            View
+        </a>
+
+        @{
+            var role = Context.Session.GetString("UserRole");
+            var isAdmin = string.Equals(role, "Admin", System.StringComparison.OrdinalIgnoreCase);
+        }
+        @if (isAdmin)
+        {
+            <a asp-controller="Admin" asp-action="Index"
+               style="display:inline-block; padding:6px 12px; background:#6c757d; color:#fff; text-decoration:none; border-radius:4px;">
+                Back
+            </a>
+        }
+        else
+        {
+            <a asp-controller="User" asp-action="UserIndex"
+               style="display:inline-block; padding:6px 12px; background:#6c757d; color:#fff; text-decoration:none; border-radius:4px;">
+                Back
+            </a>
+        }
+    </div>
 </div>

@@ -7,13 +7,21 @@ namespace DocumentManagementSystem.Repository.Interfaces
     {
         List<DocumentShare> GetAll();
 
-        DocumentShare GetById(int id);
-
         void Add(DocumentShare documentShare);
 
-        void Update(DocumentShare documentShare);
 
         void Delete(int id);
 
+        // Get documents shared with a specific user
+        List<DocumentShare> GetSharedWithUser(int userId);
+
+        // Get documents shared by a specific user
+        List<DocumentShare> GetSharedByUser(int userId);
+
+        // Check if a document is already shared with a user
+        bool IsDocumentSharedWithUser(int documentId, int userId);
+
+        // Get all users except the document owner
+        List<User> GetUsersForSharing(int documentOwnerId);
     }
 }

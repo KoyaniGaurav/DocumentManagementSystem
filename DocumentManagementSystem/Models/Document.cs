@@ -7,6 +7,7 @@ namespace DocumentManagementSystem.Models
 {
     public class Document
     {
+
         public int Id { get; set; }
 
         [Required(ErrorMessage = "Document title is required")]

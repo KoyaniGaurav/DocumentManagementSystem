@@ -1,7 +1,10 @@
-﻿@model DocumentManagementSystem.Models.DocumentCreateViewModel
+﻿@using Microsoft.AspNetCore.Http
+@model DocumentManagementSystem.Models.DocumentCreateViewModel
 
 @{
     ViewData["Title"] = "Upload Document";
+    var role = Context.Session.GetString("UserRole");
+    var isAdmin = string.Equals(role, "Admin", System.StringComparison.OrdinalIgnoreCase);
 }
 
 <h3>Upload New Document</h3>
@@ -21,13 +24,35 @@
     </div>
 
     <div class="form-group">
+        <label asp-for="CategoryId" class="control-label"></label>
+        <select asp-for="CategoryId" class="form-control">
+            <option value="">-- Select Type --</option>
+            <option value="1">Finance</option>
+            <option value="2">Reports</option>
+            <option value="3">Invoices</option>
+            <option value="4">Technical</option>
+            <option value="5">Studies</option>
+            <option value="6">Other</option>
+        </select>
+        <span asp-validation-for="CategoryId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
         <label asp-for="File" class="control-label"></label>
         <input asp-for="File" type="file" class="form-control" />
         <span asp-validation-for="File" class="text-danger"></span>
     </div>
 
     <button type="submit" class="btn btn-success">Upload</button>
-    <a asp-controller="User" asp-action="UserIndex" class="btn btn-secondary">Cancel</a>
+
+    @if (isAdmin)
+    {
+        <a asp-controller="Admin" asp-action="Index" class="btn btn-secondary">Cancel</a>
+    }
+    else
+    {
+        <a asp-controller="User" asp-action="UserIndex" class="btn btn-secondary">Cancel</a>
+    }
 </form>
 
 @section Scripts {

@@ -15,10 +15,7 @@ namespace DocumentManagementSystem.Repository.Implementations
             _context = context;
         }
 
-        List<User> IUserRepository.GetAll()
-        {
-            return _context.Users.ToList();
-        }
+        
 
         User IUserRepository.Get(int id)
         {
@@ -38,16 +35,7 @@ namespace DocumentManagementSystem.Repository.Implementations
             return;
         }
 
-        void IUserRepository.Delete(int id)
-        {
-            User u = _context.Users.FirstOrDefault(u => u.Id == id);
-            if (u != null)
-            {
-                _context.Users.Remove(u);
-                _context.SaveChanges();
-            }
-            return;
-        }
+       
 
         User IUserRepository.GetByEmail(string email)
         {
@@ -55,6 +43,7 @@ namespace DocumentManagementSystem.Repository.Implementations
         }
         User IUserRepository.GetWithDocuments(int id)
         {
+            // this will give us the use with the id - 'id' and include the documents related to that and then give the catogory of that.
             return _context.Users
                 .Include(u => u.Documents)
                     .ThenInclude(d => d.Category)

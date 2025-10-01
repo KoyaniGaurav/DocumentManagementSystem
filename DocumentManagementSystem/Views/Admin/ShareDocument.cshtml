@@ -1,0 +1,70 @@
+@model DocumentManagementSystem.Models.DocumentShareViewModel
+
+@{
+    ViewData["Title"] = "Share Document";
+}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="mb-0">Share Document</h4>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Document:</label>
+                        <p class="form-control-plaintext">@Model.DocumentTitle</p>
+                    </div>
+
+                    <form asp-action="ShareDocument" method="post">
+                        <input type="hidden" asp-for="DocumentId" />
+                        <input type="hidden" asp-for="DocumentTitle" />
+                        <input type="hidden" asp-for="DocumentOwner" />
+
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Select Users to Share With:</label>
+                            <div class="border rounded p-3" style="max-height: 300px; overflow-y: auto;">
+                                @if (Model.AvailableUsers != null && Model.AvailableUsers.Any())
+                                {
+                                    @foreach (var user in Model.AvailableUsers)
+                                    {
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" 
+                                                   name="SelectedUserIds" 
+                                                   value="@user.Id" 
+                                                   id="user_@user.Id"
+                                                   @(Model.SelectedUserIds != null && Model.SelectedUserIds.Contains(user.Id) ? "checked" : "")>
+                                            <label class="form-check-label" for="user_@user.Id">
+                                                @user.FullName (@user.Email)
+                                            </label>
+                                        </div>
+                                    }
+                                }
+                                else
+                                {
+                                    <p class="text-muted">No users available for sharing.</p>
+                                }
+                            </div>
+                            <span asp-validation-for="SelectedUserIds" class="text-danger"></span>
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                            <a asp-action="Index" class="btn btn-secondary">
+                                <i class="fas fa-arrow-left"></i> Back to Dashboard
+                            </a>
+                            <button type="submit" class="btn btn-success">
+                                <i class="fas fa-share"></i> Share Document
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <partial name="_ValidationScriptsPartial" />
+}
